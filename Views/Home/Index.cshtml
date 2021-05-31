@@ -1,0 +1,36 @@
+﻿
+@model Razor_Assignment.Models.Survey
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta name="viewport" content="= " width="device-width" />
+    <title> Survey</title>
+
+</head>
+<body>
+    <form asp-action="Index" method="post">
+        <div asp-validation-="summary=" All></div>
+        <p>
+            <label asp-for="Name">Please enter name:</label>
+            <input asp-for="Name" />
+        </p>
+        <p>
+            <label asp-for="Response">Which state do you live in? </label>
+            <input asp-for="Response" />
+
+        </p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+<div class="text-center">
+    <h1 class="display-4">Survey Form</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
