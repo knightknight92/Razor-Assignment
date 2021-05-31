@@ -26,10 +26,12 @@ namespace Razor_Assignment.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(Survey Sir)
+        public IActionResult Index(Survey survey)
         {
-            return View("Thank you, your answers have been saved", Sir);
+            return View("Thank you, your answers have been saved",survey);
+
         }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
